@@ -1,0 +1,27 @@
+int main()
+{
+	float a, b, c, disc, x1, x2;
+	scanf("%f%f%f", &a, &b, &c);
+	if (!a)
+	{
+		printf("这是一元一次方程\n");
+	}
+	else
+	{
+		disc = b * b - 4 * a * c;
+		if (!disc)
+		{
+           printf("方程有两个相等实根%f\n", -b / (2 * a));
+		}
+		else if (disc < 0)
+		{
+			printf("方程无实根\n");
+		}
+		else
+		{
+			x1 = (-b + sqrt(disc)) / (2 * a);
+			x2= (-b - sqrt(disc)) / (2 * a);
+			printf("方程有两个不等实根%f %f\n", x1, x2);
+		}
+	}
+}

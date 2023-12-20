@@ -1,0 +1,8 @@
+void guess(int n) /*定义函数*/
+  { int n1,n2;
+    for(n1=3;n1<n/2;n1+=2)
+        {   n2=n-n1;
+            if(prime(n1) && prime(n2)) /*调用函数*/
+				printf("%d=%d+%d\n",n,n1,n2);
+        }
+  }

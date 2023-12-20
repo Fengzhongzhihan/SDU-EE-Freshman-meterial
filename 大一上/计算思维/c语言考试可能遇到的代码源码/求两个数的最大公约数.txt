@@ -1,0 +1,19 @@
+int n = 0;
+	int m = 0;
+	scanf("%d%d", &n, &m);
+	int r = n;
+	while (m % n)
+	{
+		r = m % n;
+		m = n;
+		n = r;
+	}
+	printf("%d", r);
+	return 0;
+}
+递归
+int f(int m,int n)
+{
+	if (!(m % n))return n;
+	else return f(n, m % n);
+}

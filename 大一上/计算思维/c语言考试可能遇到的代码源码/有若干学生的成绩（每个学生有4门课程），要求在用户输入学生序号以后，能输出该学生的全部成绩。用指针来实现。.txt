@@ -1,0 +1,4 @@
+int score[ ][4]    存放若干学生的4门课成绩
+     float *search(pointer ,4) 
+p=search(score, m);
+ 返回数组的地址

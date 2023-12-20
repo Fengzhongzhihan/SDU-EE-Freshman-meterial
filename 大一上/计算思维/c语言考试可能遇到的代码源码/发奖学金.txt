@@ -1,0 +1,29 @@
+设某一个班共有30个学生，期末考试5门课程，
+请编一程序评定学生的奖学金，要求打印输出一、二等奖学金学生的学号和各门课成绩。
+（奖学金评定标准是：总成绩超过全班总平成绩20%发给一等奖学金
+，超过全班总平成绩10%发给二等奖学金）
+int i, j, k;
+  float x[NUM][KCN+1];    /*存放成绩，最后1列为该生总成绩*/
+  float  sum, tt=0.0, ver;
+  for(i=0;i<NUM;i++)
+    { sum=0;           /*每位学生成绩输入前,其总成绩赋初值0*/
+      for(j=0;j<KCN;j++)
+        { scanf("%d",&x[i][j]); 
+          sum+=x[i][j]; }   /* 累加求i个学生总成绩 */
+      x[i][KCN] = sum;         /* 总成绩存入数组的最后一列*/
+      tt += x[i][KCN];     /* 累加求全班的总成绩 */
+     }
+  ver = tt / NUM;              /*  计算全班总平成绩 */
+
+for(i=0;i<NUM;i++)            /*打印输出A等奖学金的学生*/
+    if( x[i][KCN]>=1.2*ver)
+      { printf("%5d",i+1);
+        for(j=0;j<KCN;j++)
+          printf("%5.1f", x[i][j]);
+        printf("grade A\n"); }
+for(i=0;i<NUM;i++)            /*打印输出B等奖学金的学生*/
+    if(x[i][KCN]>=1.1*ver && x[i][KCN]<1.2*ver)
+      { printf("%5d",i+1);
+        for(j=0;j<KCN;j++)
+            printf("%5.1f", x[i][j]);
+        printf("grade B\n"); }

@@ -1,0 +1,13 @@
+main()
+ {
+   int a[NUM],bn[11]={0},i,k;  float sum＝0,aver;
+   for(i=0;i<NUM;i++)        /* 循环输入学生成绩 */
+      scanf("%d", &a[i]);
+   for(i=0;i<NUM;i++)        /* 统计各分数段的人数 */
+      { k = a[i] / 10;
+        bn[k] ++;
+      }
+  for(i=0;i<10;i++)   /* 打印输出各分数段的学生人数 */
+      printf("%2d--%2d=%d\n",i*10,i*10+9,bn[i]);
+  printf( "  100---= %d " ,bn[i]);
+  } 

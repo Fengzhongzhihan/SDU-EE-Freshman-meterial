@@ -1,0 +1,15 @@
+int main()
+{
+	int sign = 1;
+	float deno = 2.0;
+	float sum = 1.0;
+	float term;
+	while (deno <= 100)
+	{
+		sign = -sign;
+		term = sign / deno;
+		sum += term;
+		deno++;
+	}
+	printf("%f", sum);
+}

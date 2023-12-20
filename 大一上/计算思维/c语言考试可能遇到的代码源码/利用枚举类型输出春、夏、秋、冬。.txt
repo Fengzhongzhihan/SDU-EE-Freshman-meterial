@@ -1,0 +1,23 @@
+enum season
+{ spring, summer, autumn, winter, end};
+enum season select( )
+{  int s;
+   printf("\nPleaser input a number(0-4):");
+   scanf("%d",&s);
+   return ((enum season) s);
+}
+main()
+{    enum season times;
+      while(1)
+      {     times=select();
+	        if (times==end) break;
+	        switch (times)
+	       {   case spring: printf("\nIt is spring.");break;
+	           case summer: printf("\nIt is summer.");break;
+	           case autumn: printf("\nIt is autumn.");break;
+	           case winter: printf("\nIt is winter.");break;
+	       }
+        }
+}
+
+

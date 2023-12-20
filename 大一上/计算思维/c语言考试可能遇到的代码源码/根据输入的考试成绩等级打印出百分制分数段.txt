@@ -1,0 +1,14 @@
+int main()
+{
+	char grade;
+	printf("请输入考试等级A-D\n");
+	scanf("%c", &grade);
+	switch (grade)
+	{
+	case 'A':printf("80-90\n");
+		break;
+	case'B':printf("70-79\n");
+		break;
+	
+	}
+}

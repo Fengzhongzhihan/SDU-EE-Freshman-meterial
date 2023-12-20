@@ -1,0 +1,13 @@
+#define  N 10
+main()
+ { int i,t,a[N];
+   for(i=0;i<N;i++)       /* 输入数据 */
+      scanf("%d",&a[i]);
+   for(i=0;i< N/2;i++)    /* 将数组倒置 */
+      { t=a[i];
+       a[i]=a[N-i-1];
+       a[N-i-1]=t;
+      }
+   for(i=0;i<N;i++)       /* 输出倒置后的数组 */
+      printf("%d ",a[i]);
+  }

@@ -1,0 +1,20 @@
+转置方阵
+void main()
+ { int i,j,t;   int a[3][3]={{1,4,7},{2,5,8},{3,6,9}};
+   for(i=0; i<3; i++)
+     for(j=i+1; j<3; j++)
+       {  t=a[i][j];
+          a[i][j]=a[j][i];
+          a[j][i]=t;
+       }
+   for(i=0;i<3;i++)         /* 打印输出转置后的矩阵 */
+      {  for(j=0;j<N;j++)
+               printf("%d ",a[i][j]);
+         printf("\n");       /* 换行 */
+      }
+转置不是方阵
+重新定义数组
+for(i=0; i<M; i++)
+         for(j= 0; j<N; j++)
+             b[j][i]=a[i][j];
+

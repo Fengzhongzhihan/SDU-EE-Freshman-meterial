@@ -1,0 +1,29 @@
+struct Student *creat(void)  
+p1=p2=( struct Student*) malloc(LEN); 
+   scanf(“%ld,%f”,&p1->num,&p1->score); 
+   head=NULL;
+   while(p1->num!=0)
+   {n=n+1;
+	  if(n==1) head=p1;
+	  else  p2->next=p1;
+	  p2=p1;
+	  p1=(struct Student*)malloc(LEN); 
+	  scanf(“%ld,%f”,&p1->num,&p1->score);
+	}
+struct Student *pt;
+   pt=creat();  
+   printf(“\nnum:%ld\nscore:%5.1f\n”,
+                            pt->num,pt->score); 
+   return 0;
+
+输出链表
+void print(struct Student *p)  
+{
+   printf("\nThese %d records are:\n",n);   
+   if(p!=NULL)
+      do
+      { printf("%ld %5.1f\n", p->num,p->score);
+         p=p->next;
+      }while(p!=NULL);
+}
+

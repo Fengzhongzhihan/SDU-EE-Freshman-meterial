@@ -1,0 +1,15 @@
+int n = 0;
+	scanf("%d", &n);
+	int i = 0;
+	int k = sqrt(n);
+	
+	for (i = 2; i <= k; i++)
+	{
+		if (!(n % i))
+		{
+			printf("%d不是素数\n", n);
+			break;
+		}
+	}
+	if (i == k + 1)
+		printf("%d是素数\n", n);

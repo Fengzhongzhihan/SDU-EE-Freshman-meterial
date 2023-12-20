@@ -1,0 +1,18 @@
+void main()
+  {char s1[]="Hello ",s2[]="World!\n",s3[20];
+   int i,j;
+	 for(i=0;s1[i]!='\0';i++)  /*复制第一个字符串*/
+	       s3[i]=s1[i];
+	 for(j=0;s2[j]!='\0'; j++,i++) /*复制第二个字符串*/
+	       s3[i]=s2[j];
+	 s3[i]='\0'; 
+   puts(s1);   puts(s2);   puts(s3);
+  }
+/*初始化s3，使其指向一块能容纳连接字符串的存储空间*/
+	s3=calloc(strlen(s1)+strlen(s2)+1,sizeof(char));   t=s3;
+	while(*s1!='\0')     /*复制第一个字符串*/
+                  {*s3=*s1;   s1++;   s3++;   }
+             while(*s2!='\0')	/*复制第二个字符串*/
+	     { *s3=*s2;s2++;s3++;  }
+ *s3='\0'; 	
+

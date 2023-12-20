@@ -1,0 +1,16 @@
+main()
+{float  c;
+  int m,n;
+  float  fac(int x);
+  printf(“input m,n:”);
+  scanf(“%d%d”,&m,&n);
+  c=fac(m)/(fac(n)*fac(m-n));
+  printf(“The result  is %8.1f”,c);
+}
+
+float  fac(int x)
+{int  i;
+  float t=1;
+  for (i=1;i<=x;i++)
+       t=t*i;
+  return(t);

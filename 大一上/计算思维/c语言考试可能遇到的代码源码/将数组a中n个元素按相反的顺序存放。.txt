@@ -1,0 +1,4 @@
+  int     *p, temp,*i,*j, m=n-1/2;
+        for(i=x,j=x+n-1;i<=x+m; i++,j--) 
+            { temp=*i; *i=*j;  *j=temp;}  
+        return;

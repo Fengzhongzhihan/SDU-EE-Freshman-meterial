@@ -1,0 +1,20 @@
+使用字符数组
+char s1[]="Hello World!\n";  int i;
+ char s2[20];         /*s2的长度要定义合适*/ 
+ for(i=0;s1[i]!='\0';i++)    s2[i]=s1[i];
+ s2[i]='\0';	
+指针变量
+har *s1="Hello World!\n", *s2,*t;	puts(s1);
+	 /*初始化s2，使其指向一块能够容纳所复制字符串的存储空间*/
+  s2=calloc(strlen(s1)+1,sizeof(char));
+  t=s2;
+	while(*s1!='\0')
+	     { *s2=*s1;   s1++;    s2++; }
+  *s2='\0';		/*复制循环中未复制的字符串结束标志*/
+  s2=t;   
+  puts(s2);
+改进
+ while((*pds=*pss)!='\0')
+     {   pds++;    pss++; }
+
+

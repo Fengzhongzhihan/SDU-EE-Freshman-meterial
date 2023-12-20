@@ -1,0 +1,11 @@
+int i,j,s=0,ave,v[3],a[5][3];
+   for(i=0;i<3;i++)
+     { s=0;
+       for(j=0;j<5;j++)
+ 	      { scanf("%d",&a[j][i]);
+ 	        s=s+a[j][i];
+            }
+              v[i]=s/5;         
+     }
+  ave=(v[0]+v[1]+v[2])/3;                
+  printf("%d %d %d total:%d\n",v[0],v[1],v[2],ave);

@@ -1,0 +1,11 @@
+void swap(int* x, int* y)
+{
+	int* temp;
+	temp = x;
+	x = y;
+	y = temp;
+}
+错误!
+原因:无法交换两个变量的地址,需要使用二级指针
+ int temp;
+               temp=*x; *x=*y; *y=temp;       才有效

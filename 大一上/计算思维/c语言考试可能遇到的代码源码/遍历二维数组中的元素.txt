@@ -1,0 +1,26 @@
+for (i=0;i<N*M;i++,p++)   或 for (p=a[0];p<a[0]+N*M;p++) 
+ for (i=0;i<N;i++)
+         for (j=0;j<M;j++) 
+void main()
+{ int a[M][N],i,*p;
+  for(p=&a[0][0];p<&a[M-1][N-1];p++)
+	    scanf("%d",p);  
+	for(i=0,p=&a[0][0];p<&a[M-1][N-1];p++)
+      {printf("%d",*p);
+       i++;
+       if(i%N==0)printf("\n");
+      }
+} 
+使用行指针变量处理二维数组的方法->数组指针
+int a[M][N],i;
+	int (*p)[N];
+	for(p=a;p<a+M;p++)
+    for(i=0;i<N;i++)
+	       scanf("%d",*p+i);
+	for(p=a;p<a+M;p++)
+    {for(i=0;i<N;i++)
+	        printf("%d",*(*p+i));
+	   printf("\n");
+    }
+
+
